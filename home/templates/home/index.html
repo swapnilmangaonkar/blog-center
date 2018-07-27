@@ -1,0 +1,24 @@
+{% extends 'home/header.html' %}
+<ul>
+{% block a%}
+    <ul>
+<h1><b><p>&nbsp;Today's Topics</p></b></h1>
+</ul>
+<ul>
+
+<div class="boxed">
+    {%for a in all_questions%}
+    <li>
+        <label><b>{{ a.question_title }}</b><br>{{ a.description }}<br></label>
+        <img src="{{a.image.url}}"height="200" width="400"/>
+    </li>
+    {% endfor %}
+    <form method="get" action="/1/">
+        <button type="submit">Add post</button>
+    </form>
+</div>
+
+</ul>
+
+{% endblock %}
+

@@ -1,0 +1,15 @@
+{% extends 'home/header.html' %}
+{% block a %}
+
+<ul>
+{% block content %}
+    <h1><p1>&ensp;Add your experience !</p1></h1>
+
+   <form method="POST", class="post-form" enctype="multipart/form-data">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default"  >save</button>
+    </form>
+{% endblock %}
+</ul>
+{% endblock %}
+

@@ -1,0 +1,34 @@
+ {% load static %}
+<link	rel="stylesheet" href="{%static	'css/home.css'%}"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;subset=latin-ext" rel="stylesheet">
+<link	href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext"	rel="stylesheet"	type="text/css">
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid"><div class="navbar-header "><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        <a class="navbar-brand"><p4><b>BLOG CENTER</b></p4></a>
+    </div>
+  </nav>
+
+<html>
+{% block a %}
+<head>
+    <title></title>
+</head>
+
+<body>
+    <form method="POST">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+{% endblock %}
+</html>

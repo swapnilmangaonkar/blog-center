@@ -1,0 +1,12 @@
+body{
+    background : white url("images/p8.png");
+}
+
+.boxed {
+
+    box-sizing: border-box;
+    background: white;
+    padding: 20px;
+    width: 40%;
+    float: left;
+}

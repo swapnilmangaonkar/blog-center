@@ -1,0 +1,22 @@
+{% extends 'home/header.html' %}
+{% load static %}
+
+{% block a %}
+
+
+<ul>
+    <h1><b><p>Profile</p></b></h1>
+    <h1><p><b>Post of {{user.get_username}}</b></p></h1>
+
+<div class="boxed">
+    {% for a in all_posts %}
+    <label><font size="7" ><p1>{{ a.title }}  {{a.user.get_username}}</p1></font><br>
+        <br>{{ a.text}}<br><br><img src="{{ a.image.url }}" height="200" width="200"/></label><br>
+    <label>({{ a.published_time }})</label><br>
+    <label>-----------------------------------------------------------------------------------------</label>
+
+    {% endfor %}
+</div>
+</ul>
+
+{% endblock %}

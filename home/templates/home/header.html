@@ -1,0 +1,56 @@
+
+    <title>home</title>
+    {% load static %}
+<link	rel="stylesheet" href="{%static	'css/home.css'%}"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Anton&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;subset=latin-ext" rel="stylesheet">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid"><div class="navbar-header "><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        <a class="navbar-brand"><p2><b>BLOG CENTER</b></p2></a>
+    </div>
+        <div class="collapse navbar-collapse" id="topnavbar">
+         <ul class="nav navbar-nav navbar">
+
+             <li class="">
+                 <a href="{% url 'post_list' %}">
+                     <span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Home
+                 </a>
+             </li>
+             <li class="">
+                 <a href="/1/">
+                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;Add Post
+                 </a>
+             </li>
+             <li class="">
+                 <a href="{% url 'view_post' %}">
+                     <span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;All Post
+                 </a>
+             </li>
+              <li class="">
+                 <a href="{% url 'profile' %}">
+                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Profile
+                 </a>
+             </li>
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+             <li class="">
+                 <a href="{% url 'logout' %}">
+                     <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Logout
+                 </a>
+             </li>
+         </ul>
+         </div>
+
+</nav>
+
+
+{% block a%}
+{% endblock %}
